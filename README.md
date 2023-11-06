@@ -1,2 +1,2 @@
 # qlymc
-Framework for software quality metrics
+Framework for gathering software quality metrics
