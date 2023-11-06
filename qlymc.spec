@@ -7,6 +7,7 @@ Group:          Development/Tools/Other
 Url:            https://github.com/llansky3/qlymc
 Source0:        _service
 BuildRequires:  fdupes
+BuildRequires:  python3-setuptools
 BuildArch:      noarch
 
 %description
