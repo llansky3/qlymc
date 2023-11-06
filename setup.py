@@ -8,5 +8,8 @@ setup(
     author='Lukas Lansky',
     author_email='lukas.lansky@suse.com',
     license='GPL-2.0',
-    packages=['qlymc']
+    packages=['qlymc'],
+    entry_points={
+        'console_scripts': ['qlymc=qlymc.__main__:main']
+    }
 )
