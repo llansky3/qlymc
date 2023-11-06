@@ -1,5 +1,5 @@
 Name:           qlymc
-Version:        0.1.0
+Version:        GIT
 Release:        0
 Summary:        Framework for gathering software quality metrics
 License:        GPL-2.0
