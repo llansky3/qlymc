@@ -26,8 +26,7 @@ Framework for gathering software quality metrics
 %files
 %license LICENSE
 %doc README.md %{name}.changes
-%{python3_sitelib}/%{name}/
-%{python3_sitelib}/%{name}-%{version}-*-info/
+%{python3_sitelib}/%{name}*/
 %{_bindir}/%{name}
 
 %changelog
