@@ -1,8 +1,6 @@
 import re
 from setuptools import setup
 from pathlib import Path
-# from git import Repo 
-
 
 def get_version():
     # repo = Repo(Path(__file__).parent.is_absolute())
@@ -10,7 +8,6 @@ def get_version():
     # path = Path(__file__).parent.resolve()
     # current_version = '0.1.0'
     path = str(Path(__file__).parent.absolute())
-    print(path)
     result = re.search(r'.*/SOURCES/.*-(.*)', path)
     return result.group(1)
 
