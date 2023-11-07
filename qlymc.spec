@@ -1,5 +1,5 @@
 Name:           qlymc
-Version:        0.1.0
+Version:        GIT
 Release:        0
 Summary:        Framework for gathering software quality metrics
 License:        GPL-2.0
@@ -8,6 +8,7 @@ Url:            https://github.com/llansky3/qlymc
 Source0:        _service
 BuildRequires:  fdupes
 BuildRequires:  python3-setuptools
+BuildRequired:  python3-GitPython
 BuildArch:      noarch
 
 %description
