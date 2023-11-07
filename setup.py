@@ -1,9 +1,12 @@
 from setuptools import setup
+# from pathlib import Path
 from git import Repo 
 
 def get_version():
-    repo = Repo('.')
+    repo = Repo(__file__)
     current_version = repo.git.show('--no-patch','--format=%ct.%h','HEAD')
+    # path = Path(__file__).parent.resolve()
+    # current_version = '0.1.0'
     return current_version
 
 setup(
