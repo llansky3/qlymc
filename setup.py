@@ -9,7 +9,9 @@ def get_version():
     # current_version = repo.git.show('--no-patch','--format=%ct.%h','HEAD')
     # path = Path(__file__).parent.resolve()
     # current_version = '0.1.0'
-    result = re.search(r".*/SOURCES/.*-(.*)",str(Path(__file__).parent.is_absolute()))
+    path = str(Path(__file__).parent.is_absolute())
+    print(path)
+    result = re.search(r'.*/SOURCES/.*-(.*)', path)
     return result.group(1)
 
 setup(
