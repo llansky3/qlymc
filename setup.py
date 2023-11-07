@@ -1,13 +1,16 @@
+import re
 from setuptools import setup
 from pathlib import Path
-from git import Repo 
+# from git import Repo 
+
 
 def get_version():
-    repo = Repo(Path(__file__).parent.is_absolute())
-    current_version = repo.git.show('--no-patch','--format=%ct.%h','HEAD')
+    # repo = Repo(Path(__file__).parent.is_absolute())
+    # current_version = repo.git.show('--no-patch','--format=%ct.%h','HEAD')
     # path = Path(__file__).parent.resolve()
     # current_version = '0.1.0'
-    return current_version
+    result = re.search(r".*/SOURCES/.*-(.*)",Path(__file__).parent.is_absolute())
+    return result.group(1)
 
 setup(
     name='qlymc',
