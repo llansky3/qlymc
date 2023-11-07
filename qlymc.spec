@@ -8,7 +8,7 @@ Url:            https://github.com/llansky3/qlymc
 Source0:        _service
 BuildRequires:  fdupes
 BuildRequires:  python3-setuptools
-BuildRequired:  python3-GitPython
+BuildRequires:  python3-GitPython
 BuildArch:      noarch
 
 %description
