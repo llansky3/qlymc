@@ -26,9 +26,18 @@ else
 fi
 
 commit=$(git rev-parse --short HEAD)
-version=${tag}.0+${commit}
+version=${tag}
+if grep -q $version $VERSION_FILE; then
+  echo "┣ Nothing to do! This version $version is already there."
+  echo "┻"
+  exit 1
+fi
+
 echo "┣ Setting version to: $version"
 echo  $version > $VERSION_FILE
+echo "┣ Appending changes to last commit"
+git add ${VERSION_FILE}
+git commit --amend --no-edit
 
 if [ "$newtag" = true ]; then
     # TODO: Check if this tag version is higher than last tag
@@ -36,6 +45,4 @@ if [ "$newtag" = true ]; then
     git tag ${tag}
 fi
 
-git add ${VERSION_FILE}
-git commit --amend --no-edit
 echo "┻"
