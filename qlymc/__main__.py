@@ -1,6 +1,5 @@
-
 def main():
-    print('QLYMC')
+    print('QLYMC!')
 
 if __name__ == '__main__':
     main()
